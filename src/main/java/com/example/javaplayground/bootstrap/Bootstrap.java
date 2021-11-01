@@ -2,6 +2,8 @@ package com.example.javaplayground.bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,6 +23,9 @@ public class Bootstrap implements CommandLineRunner {
         // streamParallel();
         // streamMap();
         // streamFlatMap()
+
+        Flux<Integer> just = Flux.just(1, 2, 3, 4);
+        Mono<Integer> mono = Mono.just(1);
 
 
     }
